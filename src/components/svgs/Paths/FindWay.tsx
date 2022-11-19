@@ -7,6 +7,7 @@ function FindWay() {
       width="158"
       height="146"
       fill="none"
+      className="object-cover w-full h-full"
       viewBox="0 0 158 146"
     >
       <path

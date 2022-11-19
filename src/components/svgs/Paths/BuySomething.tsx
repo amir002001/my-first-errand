@@ -7,6 +7,7 @@ function BuySomething() {
       width="164"
       height="121"
       fill="none"
+      className="object-cover w-full h-full"
       viewBox="0 0 164 121"
     >
       <path
