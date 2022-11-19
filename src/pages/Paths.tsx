@@ -17,7 +17,7 @@ function Paths() {
         <BuySomething />
       </div>
       <div className="absolute w-1/3">
-        <FindParents />hello
+        <FindParents />
       </div>
     </div>
   );
