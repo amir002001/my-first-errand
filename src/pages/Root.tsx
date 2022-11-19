@@ -1,7 +1,6 @@
-import "./App.css";
-import ShoppingCart from "./components/svgs/initial/ShoppingCart";
-import Title from "./components/svgs/initial/TextBehind";
-import Cloud from "./components/svgs/initial/Cloud";
+import ShoppingCart from "../components/svgs/Root/ShoppingCart";
+import Title from "../components/svgs/Root/TextBehind";
+import Cloud from "../components/svgs/Root/Cloud";
 
 function Root() {
   const handleSubmit = (event: React.SyntheticEvent) => {
@@ -11,7 +10,7 @@ function Root() {
   };
 
   return (
-    <div className="App w-screen h-screen">
+    <div className="w-screen h-screen">
       {/* cloud 1 */}
       <div className="opacity-[38%] absolute w-1/3 -bottom-[5%] -left-[5%]">
         <Cloud />
