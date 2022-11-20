@@ -4,16 +4,18 @@ import Cloud from "../components/svgs/Root/Cloud";
 import { collection, query, onSnapshot, doc, setDoc, addDoc } from "firebase/firestore";
 import { useState } from "react"; 
 import { db } from "../utils/Firebase";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Root() {
   const [name, setName] = useState("")
   const [address, setAddress] = useState("") 
   const [parentNumber, setParentNumber] = useState("") 
+  const navigate = useNavigate();
+
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
-    if (name !== "" && address !== "" && parentNumber !== "") {  
       try {
         const docRef = await addDoc(collection(db, "users"), {
           name: name, 
@@ -26,19 +28,13 @@ function Root() {
         console.log("Error: " + e) 
       } 
       
-    } else {
-      alert("Please fill in the information");
-    }
-
     setName("")
     setAddress("")
     setParentNumber("")
 
-
-    // 👇️ redirect to /contacts
-    // navigate('/contacts');
+    navigate("/paths");
   };
-
+  
   return (
     <div className="w-screen h-screen">
       {/* cloud 1 */}
@@ -72,6 +68,7 @@ function Root() {
             onChange={(e) => setAddress(e.target.value)}
             value={address}
 
+
           />
           <input
             className="py-2 px-5 rounded-xl text-[#E5AB13] placeholder:text-[#FFD15B]"
@@ -79,13 +76,14 @@ function Root() {
             onChange={(e) => setParentNumber(e.target.value)}
             value={parentNumber}
 
-          />
-          <button
-            className="w-fit  text-white bg-[#478BF0] p-2 rounded-xl self-center text-xl"
-            type="submit"
-          >
+
+          /> 
+            <Link to="paths" className="w-fit  text-white bg-[#478BF0] p-2 rounded-xl self-center text-xl" onClick={handleSubmit} > 
             Let's Go!
-          </button>
+            </Link>
+          
+     
+         
         </form>
       </div>
       {/* Shopping Cart */}
