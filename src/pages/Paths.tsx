@@ -19,16 +19,16 @@ function Paths() {
         <Cloud />
       </div>
       {/* paths */}
-      <Link to={"/FindWay"} className="absolute w-1/4 left-[5%] bottom-[10%]">
+      <Link to={"/FindWay"} className="absolute w-1/4 z-10 left-[5%] bottom-[10%]">
         <FindWayCloud />
       </Link>
-      <Link to={"/strangerDanger"} className="absolute w-1/4 -z-10 left-[25%] top-[40%] -translate-y-1/2">
+      <Link to={"/strangerDanger"} className="absolute w-1/4  left-[25%] top-[40%] -translate-y-1/2">
         <StrangerDangerCloud />
       </Link>
-      <Link to={"/buySomething"} className="absolute w-4/12 -z-10 right-[15%] top-[40%] -translate-y-1/2">
+      <Link to={"/buySomething"} className="absolute w-4/12  right-[15%] top-[40%] -translate-y-1/2">
         <BuySomethingCloud />
       </Link>
-      <Link to={"/findParents"} className="absolute w-1/4 bottom-[10%] right-[5%]">
+      <Link to={"/findParents"} className="absolute w-1/4 z-10 bottom-[10%] right-[5%]">
         <FindParentsCloud />
       </Link>
     </div>
