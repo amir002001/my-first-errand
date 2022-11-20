@@ -5,6 +5,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Paths from "./pages/Paths";
 import FindWay from "./pages/FindWay";
+import BuySomething from "./pages/BuySomething";
+import StrangerDanger from "./pages/StrangerDanger";
+import FindParents from "./pages/FindParents";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,15 @@ const router = createBrowserRouter([
   },{
     path: "/findWay",
     element: <FindWay />,
+  },{
+    path: "/buySomething",
+    element: <BuySomething />,
+  },{
+    path: "/strangerDanger",
+    element: <StrangerDanger />,
+  },{
+    path: "/findParents",
+    element: <FindParents />,
   },
 ]);
 

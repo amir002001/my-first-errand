@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BuySomethingCloud from "../components/svgs/Paths/BuySomethingCloud";
 import FindParentsCloud from "../components/svgs/Paths/FindParentsCloud";
 import FindWayCloud from "../components/svgs/Paths/FindWayCloud";
@@ -18,18 +19,18 @@ function Paths() {
         <Cloud />
       </div>
       {/* paths */}
-      <div className="absolute w-1/4 left-[5%] bottom-[10%]">
+      <Link to={"/FindWay"} className="absolute w-1/4 left-[5%] bottom-[10%]">
         <FindWayCloud />
-      </div>
-      <div className="absolute w-1/4 -z-10 left-[25%] top-[40%] -translate-y-1/2">
+      </Link>
+      <Link to={"/strangerDanger"} className="absolute w-1/4 -z-10 left-[25%] top-[40%] -translate-y-1/2">
         <StrangerDangerCloud />
-      </div>
-      <div className="absolute w-4/12 -z-10 right-[15%] top-[40%] -translate-y-1/2">
+      </Link>
+      <Link to={"/buySomething"} className="absolute w-4/12 -z-10 right-[15%] top-[40%] -translate-y-1/2">
         <BuySomethingCloud />
-      </div>
-      <div className="absolute w-1/4 bottom-[10%] right-[5%]">
+      </Link>
+      <Link to={"/findParents"} className="absolute w-1/4 bottom-[10%] right-[5%]">
         <FindParentsCloud />
-      </div>
+      </Link>
     </div>
   );
 }
