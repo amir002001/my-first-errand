@@ -1,7 +1,6 @@
 import { initializeApp, getApp, getApps } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import 'firebase/firestore'
-import { collection, query, onSnapshot } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDdymStk3b166bXdTkW1IXjHHEjfKclU2o",
@@ -13,8 +12,6 @@ const firebaseConfig = {
     measurementId: "G-9TKC0HRH38"
   };
   
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-
 const firebaseApp = initializeApp(firebaseConfig);
-const firestore = getFirestore(firebaseApp);
-export { firestore }
+const db = getFirestore(firebaseApp);
+export { db }
