@@ -17,7 +17,7 @@ function FindWay() {
       <div className="absolute w-1/3 opacity-[38%] right-0 top-[5%] -z-20 translate-x-1/3">
         <Cloud />
       </div>
-      {/*  */}
+      
     </div>
   );
 }
