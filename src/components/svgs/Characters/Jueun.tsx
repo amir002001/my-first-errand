@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon() {
+function Jueun() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -307,4 +307,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default Jueun;
