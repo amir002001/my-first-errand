@@ -4,6 +4,7 @@ import Root from "./pages/Root";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Paths from "./pages/Paths";
+import FindWay from "./pages/FindWay";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,9 @@ const router = createBrowserRouter([
   },{
     path: "/paths",
     element: <Paths />,
+  },{
+    path: "/findWay",
+    element: <FindWay />,
   },
 ]);
 

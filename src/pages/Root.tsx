@@ -1,10 +1,40 @@
 import ShoppingCart from "../components/svgs/Root/ShoppingCart";
 import Title from "../components/svgs/Root/TextBehind";
 import Cloud from "../components/svgs/Root/Cloud";
+import { collection, query, onSnapshot, doc, setDoc, addDoc } from "firebase/firestore";
+import { useState } from "react"; 
+import { db } from "../utils/Firebase";
+
 
 function Root() {
-  const handleSubmit = (event: React.SyntheticEvent) => {
+  const [name, setName] = useState("")
+  const [address, setAddress] = useState("") 
+  const [parentNumber, setParentNumber] = useState("") 
+
+  const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    if (name !== "" && address !== "" && parentNumber !== "") {  
+      try {
+        const docRef = await addDoc(collection(db, "users"), {
+          name: name, 
+          address: address, 
+          parentNumber: parentNumber
+        });    
+        localStorage.setItem("userId", docRef.id) 
+
+      }catch (e) {
+        console.log("Error: " + e) 
+      } 
+      
+    } else {
+      alert("Please fill in the information");
+    }
+
+    setName("")
+    setAddress("")
+    setParentNumber("")
+
+
     // 👇️ redirect to /contacts
     // navigate('/contacts');
   };
@@ -33,14 +63,22 @@ function Root() {
           <input
             className="py-2 px-5 rounded-xl text-[#E5AB13] placeholder:text-[#FFD15B]"
             placeholder="Kid's name here..."
+            onChange={(e) => setName(e.target.value)}
+            value={name}
           />
           <input
             className="py-2 px-5 rounded-xl text-[#E5AB13] placeholder:text-[#FFD15B]"
             placeholder="Address..."
+            onChange={(e) => setAddress(e.target.value)}
+            value={address}
+
           />
           <input
             className="py-2 px-5 rounded-xl text-[#E5AB13] placeholder:text-[#FFD15B]"
             placeholder="Parent's Phone Number..."
+            onChange={(e) => setParentNumber(e.target.value)}
+            value={parentNumber}
+
           />
           <button
             className="w-fit  text-white bg-[#478BF0] p-2 rounded-xl self-center text-xl"
