@@ -24,8 +24,8 @@ function BuySomething() {
           </div>
           <div className="w-[10%]"></div>
           <h4 className="text-3xl text-[#FFE9B1] grow">
-            Hi <span className="text-white">Galaxia</span>, I’m Burhan! Let’s go to the grocery store
-            to buy something today
+            Hi <span className="text-white">Galaxia</span>, I’m Burhan! Let’s go
+            to the grocery store to buy something today
           </h4>
           <button className="min-w-fit text-white bg-[#478BF0] p-2 rounded-xl self-center text-xl mr-[10vw] ">
             Let's Go
@@ -33,13 +33,13 @@ function BuySomething() {
         </div>
       </div>
       {/* Character and Character name */}
-      <div className="absolute w-1/5  left-[10%] top-1/2 -translate-y-1/2 z-10">
+      <div className="absolute left-[10%] top-[40%] -translate-y-1/2 z-10">
         <div className="flex flex-col items-center">
           <Burhan />
           <h2 className="text-white text-6xl">Burhan</h2>
         </div>
       </div>
-      <div className="absolute w-3/4 left-[20%] top-1/2 -translate-y-1/2">
+      <div className="absolute w-3/4 left-[20%] top-[40%] -translate-y-1/2">
         <SuperMarketWithTiles />
       </div>
     </div>

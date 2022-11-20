@@ -8,7 +8,7 @@ import StrangerDangerCloud from "../components/svgs/Paths/StrangerDangerCloud";
 import Cloud from "../components/svgs/Root/Cloud";
 
 function FindWay() {
-  return (<div></div>
+  return (<div>FindWay</div>
   );
 }
 
