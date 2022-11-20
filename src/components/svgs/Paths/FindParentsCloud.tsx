@@ -1,6 +1,6 @@
 import React from "react";
 
-function FindParents() {
+function FindParentsCloud() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ function FindParents() {
   );
 }
 
-export default FindParents;
+export default FindParentsCloud;

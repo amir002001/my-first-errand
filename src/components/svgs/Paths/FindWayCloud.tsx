@@ -1,6 +1,6 @@
 import React from "react";
 
-function FindWay() {
+function FindWayCloud() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ function FindWay() {
   );
 }
 
-export default FindWay;
+export default FindWayCloud;

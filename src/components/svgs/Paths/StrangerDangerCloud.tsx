@@ -1,6 +1,6 @@
 import React from "react";
 
-function StrangerDanger() {
+function StrangerDangerCloud() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ function StrangerDanger() {
   );
 }
 
-export default StrangerDanger;
+export default StrangerDangerCloud;

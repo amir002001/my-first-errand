@@ -1,6 +1,6 @@
 import React from "react";
 
-function BuySomething() {
+function BuySomethingCloud() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,4 +28,4 @@ function BuySomething() {
   );
 }
 
-export default BuySomething;
+export default BuySomethingCloud;
