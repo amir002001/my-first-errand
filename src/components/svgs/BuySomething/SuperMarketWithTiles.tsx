@@ -1,11 +1,9 @@
-import React from "react";
-
 function SuperMarketWithTiles() {
   return (
     <svg
+      className="w-full h-full object-contain"
       xmlns="http://www.w3.org/2000/svg"
       width="403"
-      className="w-full h-full object-contain"
       height="123"
       fill="none"
       viewBox="0 0 403 123"
@@ -14,6 +12,11 @@ function SuperMarketWithTiles() {
         fill="#D9D9D9"
         d="M131.326 122.202H268.749V152.905H131.326z"
         transform="rotate(-162.454 131.326 122.202)"
+      ></path>
+      <path
+        fill="#D9D9D9"
+        d="M247.152 91.242H313.38599999999997V121.94500000000001H247.152z"
+        transform="rotate(-162.454 247.152 91.242)"
       ></path>
       <rect width="152" height="77" x="240" y="21" fill="#CC8282" rx="5"></rect>
       <rect width="174" height="11" x="229" y="14" fill="#D1AF6D" rx="5"></rect>
